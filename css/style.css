@@ -1,0 +1,418 @@
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap');
+
+body {
+    margin: 0;
+    background-color: #72d988;
+    height: 100%;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.2rem;
+    font-weight:bolder;
+
+}
+
+.active {
+    background-color: #cff7cf;
+}
+
+.loading-container{
+    position:   fixed;
+    z-index:    1;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, 1 ) 
+                url('../icons/loading.svg') 
+                50% 50% 
+                no-repeat;
+}
+
+.nav-bar ul {
+    font-family: "Nunito";
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    height: 20%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.nav-bar img{
+    max-width: 8rem;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+.nav-bar li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 2%;
+    padding-left: 2%;
+    transition: all 0.3s ease;
+    cursor:pointer;
+}
+
+.nav-bar li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#greater-than {
+    max-width: 1rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover #greater-than {
+    transform: rotate(90deg);
+}
+
+.dropdown .dropdown-menu a{
+    transition: all 0.3s ease;
+}
+
+.dropdown .dropdown-menu a:hover  {
+    background-color: #cff7cf;
+}
+
+/* Change the link and hover colors */
+.nav-bar li:hover {
+    background-color: #cff7cf;
+}
+
+
+
+.dropdown {
+    position: relative;
+
+}
+
+.dropdown-menu {
+    display: none;
+    text-align: center;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul li{
+    padding-right: 5%;
+}
+
+
+.dropdown-menu ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    display: block; 
+    padding: 5px 0;
+}
+
+.user{
+    margin-left: auto;
+    margin-right:5%;
+    max-width:30%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ #user{
+    margin:0 auto;
+    max-width: 2.8rem;
+}
+
+.user{
+    cursor: pointer;
+}
+
+.user p{
+    margin:0 auto;
+    cursor:pointer;
+}
+
+.user:hover #user-text{
+    color:#44ff44;
+}
+
+.user:hover #user{
+    filter:brightness(0.5); 
+}
+
+.container{
+    text-align: center;
+    max-width: 50%;
+    margin:auto;
+    font-family: 'Kumbh Sans';
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.goals{
+    width:100%;
+    background-color: #5ce1e6;
+    border-radius: 40px;
+    border: 5px solid white;
+}
+
+.container #container-title{
+    font-weight: bold;
+}
+
+.container .calorie-goal{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+  
+.container .balance{
+    display: flex;
+    justify-content: center;
+}
+
+#calorie-data{
+    color:red;
+}
+
+#balance-data{
+    color:red;
+}
+
+#random-quote{
+    font-weight: 100;
+}
+/*DIARY OAGE STYLING--------------------*/
+
+.info{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.current-date{
+    display:flex;
+}
+
+.food-table{
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background-color: #e2e2e2;
+    margin-top: 2%;
+    display: flex;
+    text-align: center;
+    width:45%;
+    justify-content: center;
+    align-items: top;
+}
+
+.food-header{
+    background-color: #04cc76;
+    width:100%;
+    display: flex;
+    max-height: 60%;
+    border-radius:30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.excercise-table{
+    background-color: #e2e2e2;
+    margin-top: 2%;
+    display: flex;
+    text-align: center;
+    width:45%;
+    justify-content: center;
+    align-items: top;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.excercise-header{
+    background-color: #06aa95;
+    width:100%;
+    display: flex;
+    max-height: 60%;
+    border-radius:30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.excercise-food-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+
+#food-icon{
+    max-width:1.2rem;
+}
+
+#excercise-icon{
+    max-width:1.2rem;
+}
+
+.mental-table{
+    background-color: #e2e2e2;
+    margin-top: 3%;
+    display: flex;
+    text-align: center;
+    width:45%;
+    justify-content: center;
+    align-items: top;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.mental-header{
+    background-color: #3c92fa;
+    width:100%;
+    display: flex;
+    max-height: 60%;
+    border-radius:30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mental-container{
+    display: flex;
+    justify-content:center;
+}
+
+#mental-icon{
+    max-width:1.2rem;
+}
+
+
+/*This is the stylesheet for the newsfeed*/
+
+#article-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding:20px;
+}
+.articleDiv {
+    flex: 1 0 25%;
+    margin: 10px;
+    background-color: rgb(140, 140, 140);
+    padding: 10px;
+    border-radius: 6px;
+    cursor:pointer;
+    max-width:300px;
+    max-height:550px;
+
+}
+
+.article-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articleDiv:hover{
+    background-color: white;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.articleImg{
+    max-width:100%;
+    height: auto;
+}
+
+
+/*For feedback page*/
+
+.addition-container{
+    display:flex;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+    flex-direction: column;
+    text-align: center;
+    height: 60%;
+}
+
+.star-row{
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.face{
+    font-size: 2rem;
+    margin-top: 10%;
+}
+
+.feedback-container{
+    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2%;
+    margin-bottom:2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 60%;
+}
+
+#thoughts{
+    font-family: 'Nunito'; /* Set the desired font-family */
+    resize: none; /* Make the textarea non-expandable */
+    height: 150px;
+    width:100%; /* Set a suitable height */
+}
+
+#submit{
+    display: inline-block;
+    max-width: 200px;
+    margin-top: 2%;
+    background-color: #44ff44;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#submit:hover{
+    background-color: #09ff09;
+}
