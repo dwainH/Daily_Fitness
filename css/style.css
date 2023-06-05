@@ -318,7 +318,7 @@ body {
 .articleDiv {
     flex: 1 0 25%;
     margin: 10px;
-    background-color: rgb(1, 143, 44);
+    background-color: rgb(185 227 198);
     padding: 10px;
     border-radius: 6px;
     cursor:pointer;
