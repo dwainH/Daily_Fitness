@@ -12,10 +12,12 @@ $result = mysqli_query($connection, $query);
 // Check if the query was successful
 if ($result && mysqli_num_rows($result) > 0) {
     // Login successful
-    echo 'Login successful!';
+    echo ("<script>window.alert('Login Successfully')</script>");
+    header("Location: index.php");
+    exit();
 } else {
     // Login failed
-    echo 'Invalid username or password.';
+    echo ("<script>window.alert('Invalid username or password.')</script>");
 }
 
 // Close the database connection
