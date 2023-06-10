@@ -26,8 +26,10 @@
                    <li><a href="newsfeed.php">Newsfeed</a></li>
                    <li><a href="feedback.php">Feedback</a></li>
                 <div class="user">
+                    <a href="login.php">
                     <img alt="usericon" id="user" src="images/user-circle-solid.svg">
                     <p id="user-text">LOGIN</p>
+                    </a>
                 </div>
 
             </ul>
