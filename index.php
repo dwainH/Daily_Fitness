@@ -25,11 +25,10 @@
                    </li> 
                 <li><a href="newsfeed.php">Newsfeed</a></li>
                 <li><a href="feedback.php">Feedback</a></li>
-                <div class="user">
+                <div class="user" onclick= "redirectToLogin()">
                     <img alt="usericon" id="user" src="images/user-circle-solid.svg">
                     <p id="user-text">LOGIN</p>
                 </div>
-
             </ul>
         </nav>
     </header>
@@ -53,5 +52,6 @@
     </div>
 </body>
 <script src="js/index.js"></script>
+<script src="js/login.js"></script>
 </html>
 
