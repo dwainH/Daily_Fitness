@@ -29,8 +29,7 @@
                 <div class="user">
                     <img alt="usericon" id="user" src="images/user-circle-solid.svg">
                     <p id="user-text">LOGIN</p>
-                </div>
-                
+                </div> 
             </ul>
         </nav>
     </header>
