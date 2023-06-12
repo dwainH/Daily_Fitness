@@ -26,13 +26,14 @@
                    </li> 
                 <li><a href="newsfeed.php">Newsfeed</a></li>
                 <li class="active"><a href="feedback.php">Feedback</a></li>
-                <div class="user">
+                <div class="user" onclick= "redirectToLogin()">
                     <img alt="usericon" id="user" src="images/user-circle-solid.svg">
                     <p id="user-text">LOGIN</p>
-                </div> 
+                </div>
             </ul>
         </nav>
     </header>
+    
     <div class="addition-container">
         <h2>How do you rate our website?</h2>
         <div class="star-row">          
@@ -53,6 +54,7 @@
         </form>
       </div>
     <script src="js/feedback.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html> 
 

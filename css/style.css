@@ -383,8 +383,9 @@ body {
     border-radius: 10px;
     flex-direction: column;
     text-align: start;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
     height: 60%;
 }
 
@@ -417,6 +418,10 @@ body {
     background-color: #72d988;
 }
 
+/*END FOR FEEDBACK PAGE--------------------------------------------------------------------------------------*/
+
+/*For LOGIN page*/
+
 .login-container {
     background-color: #ffffff;
     border: 1px solid #cccccc;
@@ -428,31 +433,30 @@ body {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
-h2 {
+.login-container h2 {
     margin-top: 0;
     color: #333333;
 }
 
-.form-group {
+.login-container  .form-group {
     margin-bottom: 15px;
 }
 
-label {
+.login-container label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #333333;
 }
 
-input[type="text"],
-input[type="password"] {
+.login-container  input[type="text"],input[type="password"] {
     width: 80%;
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 5px;
 }
 
-button {
+.login-container button {
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -461,10 +465,198 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+.login-container button:hover {
     background-color: #45a049;
 }
 
-button:active {
+.login-container button:active {
     background-color: #3e8e41;
 }
+
+/*END FOR LOGIN PAGE---------------------------------------------------------------------------------------*/
+
+/*------------------PROGRESS PAGE STYLING-----------------------*/
+.progress-container {
+    display: flex;
+    flex-direction: row; /* Updated */
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    text-align: center;
+    height: 70%;
+    padding: 10px;
+}
+
+.progress-container #personsolid {
+    max-width: 100px;
+}
+
+.progress-container .goal-calorie {
+
+}
+
+
+
+.goal-calorie {
+    text-align: start   ;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around   ; /* Align items to start */
+}
+.calorie-bar {
+    background-color: #72d988;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+  
+.bar {
+    height: 100%;
+    background-color: #d97272;
+}
+
+.vertical-line{
+    width: 2px;
+    background-color: #b1b1b1;
+    opacity: 55%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.progress-container a {
+    text-decoration: none;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: ease-in 0.1s;
+    width:30%;
+    
+}
+
+.progress-container a:hover{
+    background-color: #38803a;
+}
+
+#update-text{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.weightandheight-container{
+    display: flex;
+    flex-direction: column; /* Updated */
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    text-align: center;
+    height: 70%;
+    padding: 10px;
+}
+
+.weightandheight-container input{
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-bottom: 1px solid #898989;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight:bolder;
+  font-family: "Nunito", sans-serif;
+}
+
+#confirm-weightandheight{
+    text-decoration: none;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: ease-in 0.1s;
+    width:30%;
+}
+
+#confirm-weightandheight:hover{
+    background-color: #38803a;
+}
+
+/*THIS IS THE END FOR PROGRESS PAGE-----------------------------------------*/
+
+/*RECOMMENDED PAGE STYLSHEET----------------------------------------------*/
+
+.recommended-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.plans{
+    margin-top: 5%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.column{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.open-poppup{
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.column:hover .open-poppup img,
+.column:hover .open-poppup h3 {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+
+.excercise-dialog{
+    width:80%;
+}
+
+.food-dialog{
+    width:80%;
+}
+
+.mental-dialog{
+    width:80%;
+}
+
+
+
+
+
+
+
+  
+

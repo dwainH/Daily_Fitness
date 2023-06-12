@@ -25,17 +25,19 @@
                    </li> 
                 <li class="active"><a href="newsfeed.php">Newsfeed</a></li>
                 <li><a href="feedback.php">Feedback</a></li>
-                <div class="user">
+                <div class="user" onclick= "redirectToLogin()">
                     <img alt="usericon" id="user" src="images/user-circle-solid.svg">
                     <p id="user-text">LOGIN</p>
                 </div>
             </ul>
         </nav>
     </header>
+    
     <div id="article-container">
         <!--Article from newsAPI is retrieved and put in here-->
     </div>
     <script src="js/news.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
 

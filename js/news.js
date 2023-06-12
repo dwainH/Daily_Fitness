@@ -16,9 +16,10 @@ fetch(apiUrl)
       for (let j = i; j < i + 4 && j < articles.length; j++) {
         const article = articles[j];
         const articleElement = document.createElement('div');
-        const truncatedDescription = article.description.length > MIN_DESCRIPTION_LENGTH
-          ? `${article.description.substring(0, MIN_DESCRIPTION_LENGTH)}...`
-          : article.description;
+        const truncatedDescription = article.description && article.description.length > MIN_DESCRIPTION_LENGTH
+        ? `${article.description.substring(0, MIN_DESCRIPTION_LENGTH)}...`
+        : article.description;
+
 
         const articleImage = document.createElement('img');
         articleImage.classList.add('articleImg');

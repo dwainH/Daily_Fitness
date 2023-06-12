@@ -9,25 +9,27 @@
         <h2>Login</h2>
         <form action="login_action.php" method="POST" onSubmit="return validate();">
         <?php
-                if (isset($_SESSION["errorMessage"])) {
-                    ?>
-                <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
-                <?php
-                    unset($_SESSION["errorMessage"]);
-                }
-                ?>
+            if (isset($_SESSION["errorMessage"])) {
+        ?>
+        <div class="error-message">
+        <?php  echo $_SESSION["errorMessage"]; ?>
+        </div>
+        <?php
+                unset($_SESSION["errorMessage"]);
+            }
+        ?>
             <div class="form-group">
-                <label for="username">Username:</label><span id="user_info"
-							class="error-info"></span>
+                <label for="username">Username:</label>
+                <span id="user_info"class="error-info"></span>
                 <input type="text" id="username" name="username" required>
             </div>
             <div class="form-group">
-                <label for="password">Password:</label><span id="password_info"
-							class="error-info"></span>
+                <label for="password">Password:</label>
+                <span id="password_info" class="error-info"></span>
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">Login</button>
-            <button type="submit">Register</button>
+            <button>Register</button>
         </form>
     </div>
     <script>

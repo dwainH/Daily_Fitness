@@ -25,13 +25,14 @@
                    </li> 
                 <li><a href="newsfeed.php">Newsfeed</a></li>
                 <li><a href="feedback.php">Feedback</a></li>
-                <div class="user">
+                <div class="user" onclick= "redirectToLogin()">
                     <img alt="usericon" id="user" src="images/user-circle-solid.svg">
                     <p id="user-text">LOGIN</p>
                 </div>
             </ul>
         </nav>
     </header>
+    
     <div class="info">
         <h3>Keep track of your habits here!</h2>
         <div class="current-date">
@@ -61,7 +62,7 @@
             </div>
         </div>
     </div>
-   
+   <script src="js/login.js"></script>
 </body>
 <script src="js/diary.js"></script>
 </html>
