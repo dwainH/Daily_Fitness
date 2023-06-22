@@ -17,7 +17,6 @@
         </div>
         <div class = "formreg">
             <h1>Registration Form</h1>
-            <div style=""></div>
             <form  action="register-action.php" method="POST">
                 <div class="form-group">
                     <label for="name">Name:</label>
