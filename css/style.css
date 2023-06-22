@@ -652,6 +652,109 @@ body {
     width:80%;
 }
 
+/*------ENd of recommended page*/
+
+/*------start of register page------*/
+
+.reg-container{
+    display:flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background-color: white;
+    margin-bottom:5%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:2%;
+    max-width:100%;
+    border-radius: 13px;
+    font-family: sans-serif;
+}
+
+.formreg input:focus {
+    outline: none;
+  }
+  
+
+.logo{
+    display: flex;
+    align-content: center;
+    width: 60%;
+    
+}
+
+.reg-container img{
+    margin-right: 3%;
+}
+
+#vertical{
+    background-color: #0000001f;
+    width:2px;
+    height: 100%;
+
+}
+
+.formreg{
+    text-align: center;
+    width:100%;
+    padding-left: 5%;
+}
+
+.formreg input[type="text"],
+.formreg input[type="password"] {
+  width: 100%;
+  border-style: none;
+  border-bottom: 3px solid black;
+  height: 60px;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Add this line to include border and padding in the width calculation */
+  font-size: 30px;
+  text-align: center;
+}
+
+
+  
+.radioRow{
+    display: flex;
+}
+
+.row1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.row1 .radioRow {
+    display: flex;
+    align-items: center;
+}
+
+  
+.row1 .radioRow input[type="radio"] {
+    accent-color: green;
+    margin-left: 5px; /* Adjust the spacing between the tick box and the label as needed */
+}
+
+.reg-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .reg-container button:hover {
+    background-color: #45a049;
+  }
+  
 
 
 
