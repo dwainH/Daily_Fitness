@@ -29,7 +29,7 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">Login</button>
-            <button>Register</button>
+            <button onclick="window.location.href='register.php'">Register</button>
         </form>
     </div>
     <script>
