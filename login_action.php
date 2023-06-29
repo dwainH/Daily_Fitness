@@ -6,12 +6,14 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 // Perform a query to check if the username and password exist in the database
-$query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+$query = "SELECT * FROM user WHERE username = '$username' AND userpass = '$password'";
 $result = mysqli_query($connection, $query);
 
 // Check if the query was successful
 if ($result && mysqli_num_rows($result) > 0) {
     // Login successful
+    session_start();
+    $_SESSION['username'] = $username;
     echo ("<script>window.alert('Login Successfully')</script>");
     header("Location: index.php");
     exit();

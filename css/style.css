@@ -221,7 +221,6 @@ body {
     border-top-left-radius: 30px;
     background-color: #e2e2e2;
     margin-top: 2%;
-    display: flex;
     text-align: center;
     width:45%;
     justify-content: center;
@@ -242,7 +241,6 @@ body {
 .excercise-table{
     background-color: #e2e2e2;
     margin-top: 2%;
-    display: flex;
     text-align: center;
     width:45%;
     justify-content: center;
@@ -278,7 +276,6 @@ body {
 .mental-table{
     background-color: #e2e2e2;
     margin-top: 3%;
-    display: flex;
     text-align: center;
     width:45%;
     justify-content: center;
@@ -754,10 +751,22 @@ body {
     background-color: #45a049;
   }
   
+  .exercise-dropdown {
+    display: block;
+    margin-top: 10px; /* Adjust the margin as per your preference */
+  }  
 
+  .food-dropdown {
+    display: block;
+    margin-top: 10px; /* Adjust the margin as per your preference */
+  }  
 
-
-
+.form-mental{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    align-content: center;
+}
 
 
   

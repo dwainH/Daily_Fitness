@@ -38,7 +38,7 @@
         document.getElementById("user_info").innerHTML = "";
         document.getElementById("password_info").innerHTML = "";
         
-        var userName = document.getElementById("user_name").value;
+        var userName = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         if(userName == "") 
         {

@@ -2,7 +2,7 @@
     // Assuming you have already established a database connection
     // Replace 'your_host', 'your_username', 'your_password', and 'your_database' with your actual database credentials
 
-    /*$host = 'dbadmin';
+    /*$host = 'localhost';
     $username = 'B032010092';
     $password = '000626060161';
     $database = 'student_b032010092';*/

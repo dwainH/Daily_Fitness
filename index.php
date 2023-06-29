@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <?php include 'index-action.php'; ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -34,9 +35,18 @@
                 </li>
                 <li><a href="newsfeed.php">Newsfeed</a></li>
                 <li><a href="feedback.php">Feedback</a></li>
-                <div class="user" onclick = "redirectToLogin()">
-                    <img alt="usericon" id="user" src="images/user-circle-solid.svg">
-                    <p id="user-text">LOGIN</p>
+                <div class="user">
+                    <?php
+                    if (isset($name) && isset($age)) {
+                       // echo '<img alt="usericon" id="user" src="' . $age . '">';
+                        echo '<p id="user-text">' . $age . '</p>';
+                        echo '<p id="user-text">' . $name . '</p>';
+                        echo '<a href="logout.php" id="logout-btn">Logout</a>';
+                    } else {
+                        echo '<img alt="usericon" id="user" src="images/user-circle-solid.svg">';
+                        echo '<p id="user-text">LOGIN</p>';
+                    }
+                    ?>
                 </div>
             </ul>
         </nav>
@@ -47,11 +57,11 @@
         <div class="goals">
             <div class="calorie-goal">
                 <h3>DAILY CALORIES GOALS:</h3>
-                <h3 id="calorie-data">data1</h3>
+                <h3 id="calorie-data"><?php echo $currentCal; ?>cals</h3>
             </div>
             <div class="balance">
                 <h3>TOTAL BALANCE:</h3>
-                <h3 id="balance-data"> data2</h3>
+                <h3 id="balance-data"><?php echo $bmr; ?> cals</h3>
             </div>
         </div>
         <div class="quote">
@@ -61,6 +71,14 @@
     </div>
 </body>
 <script src="js/index.js"></script>
-<script src="js/login.js"></script>
+<script>
+    function redirectToLogin() {
+        window.location.href = "login.php";
+    }
+
+    function redirectToProfile() {
+        // Add your logic to redirect to the user's profile page
+    }
+</script>
 
 </html>
