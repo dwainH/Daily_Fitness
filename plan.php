@@ -26,7 +26,7 @@
                 <h3 id="BMR"><?php echo $bmr; ?></h3>
             </div>
             <div>
-                <form>
+                <form method="post">>
                     <label for="cars">How Much Weight You Want To Lose Per Week:</label>
                     <select name="WeightPerWeek" id="WeightPerWeek">
                         <option value="1">1Kg</option>
@@ -42,8 +42,11 @@
                         <option value="1.2">Sedentary</option>
                     </select>
                     <br><br>
+                    <input type="submit" value="Calculate">
                 </form>
-                <h3>Daily Calories Intake : </h3>
+                <?php if (isset($caloriesLossPerDay)) { ?>
+                    <h3>Daily Calories Intake: <?php echo $caloriesLossPerDay; ?></h3>
+                <?php } ?>
             </div>
         </div>
     </div>
