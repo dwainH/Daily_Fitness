@@ -15,15 +15,35 @@
         <h1 id="container-title"><u>Choose Plan</u></h1>
         <hr>
         <div class="goals">
-            <div class="calorie-goal">
-                <h3>Basal Metabolic Rate (BMR):</h3>
-                <h3 id="BMR"><?php echo $bmr; ?></h3>
-                <br>
-                <br>
+            <div>
                 <p>Name: <?php echo $name; ?></p>
                 <p>Weight: <?php echo $weight; ?></p>
                 <p>Height: <?php echo $height; ?></p>
                 <p>Gender: <?php echo $gender; ?></p>
+            </div>
+            <div class="calorie-goal">
+                <h3>Basal Metabolic Rate (BMR):</h3>
+                <h3 id="BMR"><?php echo $bmr; ?></h3>
+            </div>
+            <div>
+                <form>
+                    <label for="cars">How Much Weight You Want To Lose Per Week:</label>
+                    <select name="WeightPerWeek" id="WeightPerWeek">
+                        <option value="1">1Kg</option>
+                        <option value="0.5">0.5 Kg</option>
+                        <option value="0.25">0.25 Kg</option>
+                    </select>
+                    <br><br>
+                    <label for="cars">Choose Your Activity Level Everyday</label>
+                    <select name="ActivityLevel" id="ActivityLevel">
+                        <option value="1.725">Very Active</option>
+                        <option value="1.55">Moderately Active</option>
+                        <option value="1.375">Lightly Active</option>
+                        <option value="1.2">Sedentary</option>
+                    </select>
+                    <br><br>
+                </form>
+                <h3>Daily Calories Intake : </h3>
             </div>
         </div>
     </div>
