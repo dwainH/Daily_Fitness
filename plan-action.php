@@ -34,12 +34,38 @@ if ($result && mysqli_num_rows($result) > 0) {
         $calories = 1100;
         $weightPerWeek = $_POST['WeightPerWeek'];
         $activityLevel = $_POST['ActivityLevel'];
+        $DailyCalories = 0;
 
         // Calculate the daily calorie intake based on the selected options
         $caloriesLossPerDay = ($bmr - ($calories * $weightPerWeek)) * $activityLevel;
 
-        // Display the calculated daily calorie intake
-        echo "Daily Calories Intake: " . $caloriesLossPerDay;
+        $DailyCalories = $bmr * $activityLevel;
+
+        // Insert or update the userplan data
+        $checkUserPlanQuery = "SELECT * FROM userplan WHERE username = '$username'";
+        $checkUserPlanResult = mysqli_query($connection, $checkUserPlanQuery);
+
+        if (mysqli_num_rows($checkUserPlanResult) > 0) {
+            // If the record exists, update the data
+            $updateUserPlanQuery = "UPDATE userplan SET KgLossPerWeek = '$weightPerWeek', ActivityLevel = '$activityLevel', CaloriesDeficitPerDay = '$caloriesLossPerDay', CaloriesBurnPerDay = '$DailyCalories' WHERE username = '$username'";
+            $updateUserPlanResult = mysqli_query($connection, $updateUserPlanQuery);
+
+            if ($updateUserPlanResult) {
+                echo "Userplan data updated successfully.";
+            } else {
+                echo "Failed to update userplan data.";
+            }
+        } else {
+            // If the record doesn't exist, insert a new record
+            $insertUserPlanQuery = "INSERT INTO userplan (username, KgLossPerWeek, ActivityLevel, CaloriesBurnPerDay, CaloriesDeficitPerDay) VALUES ('$username', '$weightPerWeek', '$activityLevel', '$caloriesLossPerDay', 0)";
+            $insertUserPlanResult = mysqli_query($connection, $insertUserPlanQuery);
+
+            if ($insertUserPlanResult) {
+                echo "Userplan data inserted successfully.";
+            } else {
+                echo "Failed to insert userplan data.";
+            }
+        }
     } else {
         // Handle the case when the form data is not set
         echo "Please select the weight loss per week and activity level.";
