@@ -30,9 +30,11 @@
                     <?php
                     if (isset($name) && isset($age)) {
                        // echo '<img alt="usericon" id="user" src="' . $age . '">';
+                       echo '<img alt="usericon" id="user" src="images/user-circle-solid.svg">';
                         echo '<p id="user-text">' . $age . '</p>';
                         echo '<p id="user-text">' . $name . '</p>';
                         echo '<a href="logout.php" id="logout-btn">Logout</a>';
+                        
                     } else {
                         echo '<img alt="usericon" id="user" src="images/user-circle-solid.svg">';
                         echo '<p id="user-text">LOGIN</p>';
