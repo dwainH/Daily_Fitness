@@ -33,13 +33,14 @@ body {
     display: flex;
     align-items: center;
     list-style-type: none;
-
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     height: 20%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 
 .nav-bar img{
@@ -56,6 +57,8 @@ body {
     padding-left: 2%;
     transition: all 0.3s ease;
     cursor:pointer;
+    box-sizing: border-box;    
+    height: 100%;
 }
 
 .nav-bar li a {
@@ -205,7 +208,8 @@ body {
 #random-quote{
     font-weight: 100;
 }
-/*DIARY OAGE STYLING--------------------*/
+
+/*DIARY PAGE STYLING--------------------*/
 
 .info{
     margin-left: 5%;
@@ -297,6 +301,7 @@ body {
 .mental-container{
     display: flex;
     justify-content:center;
+    margin-bottom:5%;
 }
 
 #mental-icon{
@@ -566,6 +571,7 @@ body {
     padding: 10px;
 }
 
+
 .weightandheight-container input{
   border: none;
   outline: none;
@@ -593,6 +599,14 @@ body {
 
 #confirm-weightandheight:hover{
     background-color: #38803a;
+}
+
+#tooltip{
+    transition: ease-in 0.1s;
+}
+
+#tooltip:hover{
+    color: #006d3e;
 }
 
 /*THIS IS THE END FOR PROGRESS PAGE-----------------------------------------*/

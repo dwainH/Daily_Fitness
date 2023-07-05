@@ -45,7 +45,11 @@
     </header>
     <div class="recommended-header">
         <h3>RECOMMEND PLAN:</h3>
-        <h3>TARGET CALORIES:2380</h3>
+        <h3>TARGET CALORIES:
+        <?php
+            echo $currentCal
+        ?>
+        </h3>
     </div>
     
     <div class="plans">

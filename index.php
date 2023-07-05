@@ -57,7 +57,7 @@
         <div class="goals">
             <div class="calorie-goal">
                 <h3>DAILY CALORIES GOALS:</h3>
-                <h3 id="calorie-data"><?php echo $currentCal; ?>cals</h3>
+                <h3 id="calorie-data"><?php echo $calorieGoals; ?> cals</h3>
             </div>
             <div class="balance">
                 <h3>TOTAL BALANCE:</h3>

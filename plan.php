@@ -49,9 +49,17 @@
                 <?php } ?>
             </div>
         </div>
+        <button id="buttonToMain" onclick="headtoMain()">Head to main page</button>
     </div>
 
 
 </body>
+
+<script>
+    function headtoMain(){
+        window.location.assign('index.php');
+    }
+
+</script>
 
 </html>

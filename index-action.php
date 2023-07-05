@@ -7,6 +7,11 @@ session_start();
 // Retrieve session variables
 $username = $_SESSION['username'];
 
+//fetch user plan  for userplan table
+$queryUserPlan = "SELECT * FROM userplan WHERE username = '$username'";
+$resultuserplan =  mysqli_query($connection,$queryUserPlan);
+
+
 // Fetch user data from the user table
 $query = "SELECT user.*, diary.TotalCalories AS currentCalories FROM user LEFT JOIN diary ON user.UserID = diary.UserID WHERE user.username = '$username'";
 $result = mysqli_query($connection, $query);
@@ -14,6 +19,7 @@ $result = mysqli_query($connection, $query);
 if ($result && mysqli_num_rows($result) > 0) {
     // Retrieve the user data
     $userData = mysqli_fetch_assoc($result);
+    $userPlan = mysqli_fetch_assoc($resultuserplan);
 
     // Extract the values
     $id = $userData['UserID'];
@@ -32,10 +38,11 @@ if ($result && mysqli_num_rows($result) > 0) {
     }
 
     // Check if currentCalories is set in the user data
-    if (isset($userData['currentCalories'])) {
-        $currentCal = $userData['currentCalories'];
+    if (isset($userPlan['CaloriesDeficitPerDay'])) {
+        $calorieGoals = $userPlan['CaloriesDeficitPerDay'];
+        
     } else {
-        $currentCal = 0;
+        $calorieGoals = 0;
     }
 } else {
     // Handle the case when no user data is found

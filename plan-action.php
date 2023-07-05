@@ -57,7 +57,7 @@ if ($result && mysqli_num_rows($result) > 0) {
             }
         } else {
             // If the record doesn't exist, insert a new record
-            $insertUserPlanQuery = "INSERT INTO userplan (username, KgLossPerWeek, ActivityLevel, CaloriesBurnPerDay, CaloriesDeficitPerDay) VALUES ('$username', '$weightPerWeek', '$activityLevel', '$caloriesLossPerDay', 0)";
+            $insertUserPlanQuery = "INSERT INTO userplan (username, KgLossPerWeek, ActivityLevel, CaloriesBurnPerDay, CaloriesDeficitPerDay) VALUES ('$username', '$weightPerWeek', '$activityLevel', '$caloriesLossPerDay', '$DailyCalories')";
             $insertUserPlanResult = mysqli_query($connection, $insertUserPlanQuery);
 
             if ($insertUserPlanResult) {
