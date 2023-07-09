@@ -47,7 +47,7 @@
         <h3>RECOMMEND PLAN:</h3>
         <h3>TARGET CALORIES:
         <?php
-            echo $currentCal
+            echo $calorieGoals
         ?>
         </h3>
     </div>
