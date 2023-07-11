@@ -95,10 +95,10 @@
 var chart = new Chart(progressBar, {
   type: 'bar',
   data: {
-    labels: ['Current Calories'],
+    labels: ['Calories'],
     datasets: [
       {
-        label: 'Calories',
+        label: 'Current Calories',
         data: [<?php echo $bmr; ?>], // Set the initial data for the progress bar
         backgroundColor: 'rgba(75, 192, 192, 0.8)',
         borderColor: 'rgba(75, 192, 192, 1)',

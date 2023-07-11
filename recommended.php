@@ -76,7 +76,7 @@
 </body>
 <script>
     document.getElementById('mental').addEventListener('click',function(event){
-        window.location.replace('https://www.who.int/news-room/fact-sheets/detail/physical-activity');
+        window.location.replace('https://screening.mhanational.org/screening-tools/');
     });
 
     document.getElementById('food').addEventListener('click',function(event){
@@ -84,7 +84,7 @@
     });
 
     document.getElementById('excercise').addEventListener('click',function(event){
-        window.location.replace('https://www.who.int/news-room/fact-sheets/detail/healthy-diet');
+        window.location.replace('https://www.who.int/news-room/fact-sheets/detail/physical-activity');
     });
 </script>
 
