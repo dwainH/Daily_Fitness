@@ -512,18 +512,6 @@ body {
     align-items: flex-start;
     justify-content: space-around   ; /* Align items to start */
 }
-.calorie-bar {
-    background-color: #72d988;
-    height: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 100%;
-}
-  
-.bar {
-    height: 100%;
-    background-color: #d97272;
-}
 
 .vertical-line{
     width: 2px;

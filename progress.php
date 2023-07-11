@@ -57,9 +57,13 @@
                 ?>
             </h4>
             <div class="calorie-bar">
-                <div class="bar" style="width: 50%;"></div>
+ 
+                <canvas id="progress-bar">
+
+                </canvas>
+
             </div>
-            <h4>Calories Needed:
+            <h4 id='calorie-goals'>Calories Needed:
                 <?php
                     echo $calorieGoals - $bmr;
                 ?>
@@ -83,5 +87,61 @@
     <form>
     <script src="js/login.js"></script>
 </body>
+<script>
+  // Create the chart using Chart.js
+  var progressBar = document.getElementById('progress-bar');
+    // Create the chart using Chart.js
+  // Create the chart using Chart.js
+var chart = new Chart(progressBar, {
+  type: 'bar',
+  data: {
+    labels: ['Current Calories'],
+    datasets: [
+      {
+        label: 'Calories',
+        data: [<?php echo $bmr; ?>], // Set the initial data for the progress bar
+        backgroundColor: 'rgba(75, 192, 192, 0.8)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      },
+      {
+        label: 'Calorie Goal',
+        data: [<?php echo $calorieGoals; ?>], // Set the data for the calorie goal bar
+        backgroundColor: 'rgba(255, 99, 132, 0.8)', // Red color for the goal bar
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+      }
+    ]
+  },
+  options: {
+    indexAxis: 'y', // Display bars along the y-axis
+    elements: {
+      bar: {
+        borderWidth: 0, // Remove border around the bars
+        borderSkipped: false // Display the border for the entire bars
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: <?php echo $calorieGoals; ?> // Set the maximum value for the y-axis
+      },
+      x: {
+        display: false // Hide the x-axis labels
+      }
+    },
+
+    responsive: true,
+    maintainAspectRatio: false
+  }
+});
+
+if (<?php echo $calorieGoals - $bmr; ?> <= 0) {
+    var calorieGoalsElement = document.getElementById('calorie-goals');
+    calorieGoalsElement.innerHTML = 'Calorie Goal reached for today';
+}
+
+</script>
+
 </html>
 

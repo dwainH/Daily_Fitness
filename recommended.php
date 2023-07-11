@@ -72,45 +72,21 @@
             </div>
         </div>
     </div>
-    <dialog id="excercise-dialog" class="excercise-dialog">
-        <p>hello excercise</p>
-        <button id="close-excercise">Close</button>
-    </dialog>
-    <dialog id="food-dialog" class="food-dialog">
-        <p>hello food</p>
-        <button id="close-food">Close</button>
-    </dialog>
-    <dialog id="mental-dialog" class="mental-dialog">
-        <p>hello mental</p>
-        <button id="close-mental">Close</button>
-    </dialog>
     <script src="js/login.js"></script>
-    <script>
-        document.getElementById('excercise').addEventListener('click',function(event){
-            document.getElementById('excercise-dialog').showModal();
-        });
-
-        document.getElementById('close-excercise').addEventListener('click',function(event){
-            document.getElementById('excercise-dialog').close();
-        });
-
-        document.getElementById('food').addEventListener('click',function(event){
-            document.getElementById('food-dialog').showModal();
-        });
-
-        document.getElementById('close-food').addEventListener('click',function(event){
-            document.getElementById('food-dialog').close();
-        });
-
-        document.getElementById('mental').addEventListener('click',function(event){
-            document.getElementById('mental-dialog').showModal();
-        });
-
-        document.getElementById('close-mental').addEventListener('click',function(event){
-            document.getElementById('mental-dialog').close();
-        });
-    </script>
 </body>
+<script>
+    document.getElementById('mental').addEventListener('click',function(event){
+        window.location.replace('https://www.who.int/news-room/fact-sheets/detail/physical-activity');
+    });
+
+    document.getElementById('food').addEventListener('click',function(event){
+        window.location.replace('https://www.who.int/news-room/fact-sheets/detail/healthy-diet');
+    });
+
+    document.getElementById('excercise').addEventListener('click',function(event){
+        window.location.replace('https://www.who.int/news-room/fact-sheets/detail/healthy-diet');
+    });
+</script>
 
 </html>
 
