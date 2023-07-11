@@ -11,10 +11,11 @@ $username = $_SESSION['username'];
 $queryUserPlan = "SELECT * FROM userplan WHERE username = '$username'";
 $resultuserplan =  mysqli_query($connection,$queryUserPlan);
 
-
 // Fetch user data from the user table
 $query = "SELECT user.*, diary.TotalCalories AS currentCalories FROM user LEFT JOIN diary ON user.UserID = diary.UserID WHERE user.username = '$username'";
 $result = mysqli_query($connection, $query);
+
+
 
 if ($result && mysqli_num_rows($result) > 0) {
     // Retrieve the user data
@@ -40,7 +41,6 @@ if ($result && mysqli_num_rows($result) > 0) {
     // Check if currentCalories is set in the user data
     if (isset($userPlan['CaloriesDeficitPerDay'])) {
         $calorieGoals = $userPlan['CaloriesDeficitPerDay'];
-        
     } else {
         $calorieGoals = 0;
     }

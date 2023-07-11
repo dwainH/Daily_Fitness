@@ -5,12 +5,6 @@ $rating = $_POST['rating'];
 $thoughts = $_POST['thoughts'];
 $username = $_SESSION['username'];
 $resultUserId = mysqli_query($connection, "SELECT UserId FROM user WHERE username = '$username'");
-$getgender = "SELECT Gender FROM user WHERE username = '$username'";
-$resultgender = mysqli_query($connection, $getgender);
-
-$userData = mysqli_fetch_assoc($resultgender);
-$gender = $userData['Gender'];
-
 
 
 if ($resultUserId) {

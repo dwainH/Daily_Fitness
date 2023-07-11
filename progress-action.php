@@ -44,8 +44,17 @@ if($resultUserId){
         $updateUserPlanQuery = "UPDATE userplan SET CaloriesDeficitPerDay = '$caloriesLossPerDay', CaloriesBurnPerDay = '$DailyCalories' WHERE username = '$username'";
         $updateUserPlanResult = mysqli_query($connection, $updateUserPlanQuery);
 
-        if ($updateUserPlanResult) {
+        $updateUserDetails = "UPDATE user SET Weight = '$new_weight', Height = '$new_height' WHERE username = '$username'";
+        $updateUserDetailsResults = mysqli_query($connection, $updateUserDetails);
+
+        if ($updateUserDetailsResults) {
             echo "Userplan data updated successfully.";
+            if ($updateUserPlanResult) {
+                echo "Userplan data updated successfully.";
+                header("Location:progress.php");
+            } else {
+                echo "Failed to update userplan data.";
+            }
         } else {
             echo "Failed to update userplan data.";
         }
