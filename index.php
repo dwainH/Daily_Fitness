@@ -61,7 +61,7 @@
             </div>
             <div class="balance">
                 <h3>TOTAL BALANCE:</h3>
-                <h3 id="balance-data"><?php echo $bmr; ?> cals</h3>
+                <h3 id="balance-data"><?php echo $currentCalorie; ?> cals</h3>
             </div>
         </div>
         <div class="quote" style="background-color: white; margin-top: 30px; border-radius: 40px;">

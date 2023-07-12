@@ -11,6 +11,7 @@ $username = $_SESSION['username'];
 $queryUserPlan = "SELECT * FROM userplan WHERE username = '$username'";
 $resultuserplan =  mysqli_query($connection,$queryUserPlan);
 
+
 // Fetch user data from the user table
 $query = "SELECT user.*, diary.TotalCalories AS currentCalories FROM user LEFT JOIN diary ON user.UserID = diary.UserID WHERE user.username = '$username'";
 $result = mysqli_query($connection, $query);
@@ -44,6 +45,15 @@ if ($result && mysqli_num_rows($result) > 0) {
     } else {
         $calorieGoals = 0;
     }
+
+    //fetch user current calories
+    $queryDiary = "SELECT * FROM diary WHERE UserID = '$id'";
+    $resultDiary =  mysqli_query($connection,$queryDiary);
+    $userDiary =mysqli_fetch_assoc($resultDiary);
+    $currentCalorie = $userDiary['TotalCalories'];
+    
+
+
 } else {
     // Handle the case when no user data is found
     echo "No user data found.";

@@ -53,7 +53,7 @@
             Calories/Day</h3>
             <h4>Current Calories:
                 <?php
-                    echo $bmr;
+                    echo $currentCalorie;
                 ?>
             </h4>
             <div class="calorie-bar">
@@ -100,7 +100,7 @@ var chart = new Chart(progressBar, {
     datasets: [
       {
         label: 'Current Calories',
-        data: [<?php echo $bmr; ?>], // Set the initial data for the progress bar
+        data: [<?php echo $currentCalorie; ?>], // Set the initial data for the progress bar
         backgroundColor: 'rgba(75, 192, 192, 0.8)',
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1
