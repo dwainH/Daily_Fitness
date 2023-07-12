@@ -57,8 +57,8 @@
             </ul>
         </nav>
     </header>
-    
-    <div class="info">
+    <br><br>
+    <div class="info" style="padding-left: 20px; padding-top:5px">
         <h3>Keep track of your habits here!</h2>
         <div class="current-date">
             <h3 style="margin-right: 10px;"><b>DATE:</b></h3>

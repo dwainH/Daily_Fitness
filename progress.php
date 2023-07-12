@@ -73,9 +73,10 @@
         </div>
         <a type="button" href="#update-weightandheight">Update progress</a>
     </div>
-    <h2 id="update-text">Update Your Weight and Height here</h2>
+    
     <form action="progress-action.php" method="POST">
     <div id="update-weightandheight" class="weightandheight-container">   
+    <h2 id="update-text">Update Your Weight and Height here</h2>
         <input type="text" id="weight-input" name="weight" class="borderless-input" placeholder="Weight(Kg)">
         <div class="height-input" style="width:100%">
             <input type="text" name="height" id="height-input" class="borderless-input" placeholder="Height(cm)">

@@ -53,20 +53,20 @@
     </div>
     
     <div class="plans">
-        <div class="column">
-            <div id="excercise" class="open-poppup" >
+        <div class="column" style="background-color: white; padding: 10px; border-radius: 40px;">
+            <div id="excercise" class="open-poppup">
                 <img style="width:150px"id="excercise" src="images/dumbbell-solid.svg" alt="excercise"></img>        
                 <h3>Excercise</h3>
             </div>
         </div>
-        <div class="column">
+        <div class="column" style="background-color: white; padding: 10px; margin-left: 10px; margin-right:10px;border-radius: 40px;">
             <div id="food" class="open-poppup">
                 <img style="width: 100px;" src="images/utensils-solid.svg" alt="excercise"></img>        
                 <h3>Food</h3>
             </div>
         </div>
-        <div class="column">
-            <div id="mental" class="open-poppup">
+        <div class="column" style="background-color: white; padding: 10px; border-radius: 40px;">
+            <div id="mental" class="open-poppup"  >
                 <img id="brain" style="width:120px;" src="images/brain-solid.svg" alt="excercise"></img>        
                 <h3>Mental Health Survey</h3>
             </div>
