@@ -64,7 +64,7 @@
                 <h3 id="balance-data"><?php echo $bmr; ?> cals</h3>
             </div>
         </div>
-        <div class="quote">
+        <div class="quote" style="background-color: white; margin-top: 30px; border-radius: 40px;">
             <h3>DAILY QUOTE:</h3>
             <h3 id="random-quote"><i>-</i></h3>
         </div>
