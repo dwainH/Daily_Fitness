@@ -46,12 +46,11 @@ if ($result && mysqli_num_rows($result) > 0) {
         $calorieGoals = 0;
     }
 
-    //fetch user current calories
-    $queryDiary = "SELECT * FROM diary WHERE UserID = '$id'";
-    $resultDiary =  mysqli_query($connection,$queryDiary);
-    $userDiary =mysqli_fetch_assoc($resultDiary);
-    $currentCalorie = $userDiary['TotalCalories'];
-    
+    $querySumCalories = "SELECT SUM(TotalCalories) AS TotalCaloriesSum FROM diary WHERE UserID = '$id'";
+    $resultSumCalories = mysqli_query($connection, $querySumCalories);
+    $rowSumCalories = mysqli_fetch_assoc($resultSumCalories);
+    $totalCaloriesSum = $rowSumCalories['TotalCaloriesSum'];
+
 
 
 } else {

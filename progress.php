@@ -53,7 +53,7 @@
             Calories/Day</h3>
             <h4>Current Calories:
                 <?php
-                    echo $currentCalorie;
+                    echo $totalCaloriesSum;
                 ?>
             </h4>
             <div class="calorie-bar">
@@ -65,7 +65,7 @@
             </div>
             <h4 id='calorie-goals'>Calories Needed:
                 <?php
-                    echo $calorieGoals - $bmr;
+                    echo $calorieGoals - $totalCaloriesSum;
                 ?>
             </h4>
         </div>
@@ -100,7 +100,7 @@ var chart = new Chart(progressBar, {
     datasets: [
       {
         label: 'Current Calories',
-        data: [<?php echo $currentCalorie; ?>], // Set the initial data for the progress bar
+        data: [<?php echo $totalCaloriesSum; ?>], // Set the initial data for the progress bar
         backgroundColor: 'rgba(75, 192, 192, 0.8)',
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1
@@ -137,7 +137,7 @@ var chart = new Chart(progressBar, {
   }
 });
 
-if (<?php echo $calorieGoals - $bmr; ?> <= 0) {
+if (<?php echo $calorieGoals - $totalCaloriesSum; ?> <= 0) {
     var calorieGoalsElement = document.getElementById('calorie-goals');
     calorieGoalsElement.innerHTML = 'Calorie Goal reached for today';
 }
